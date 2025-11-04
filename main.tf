@@ -8,7 +8,7 @@ resource "proxmox_virtual_environment_download_file" "ubuntu_2504_lxc_img" {
 resource "proxmox_virtual_environment_container" "ubuntu_container" {
   description = "Managed by Terraform"
   node_name = "blade3"
-  vm_id     = 4242
+  vm_id     = 202
   started   = true
 
   cpu {
@@ -31,7 +31,7 @@ resource "proxmox_virtual_environment_container" "ubuntu_container" {
 
     ip_config {
       ipv4 {
-        address = "10.14.4.42/16"
+        address = "10.14.3.202/16"
         gateway = "10.14.0.1"
       }
     }
@@ -43,7 +43,7 @@ resource "proxmox_virtual_environment_container" "ubuntu_container" {
     }
 
     user_account {
-      password = "AgainTest1234!"
+      password = "12345678"
     }
   }
 
