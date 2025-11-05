@@ -3,6 +3,7 @@ resource "proxmox_virtual_environment_download_file" "ubuntu_2504_lxc_img" {
   datastore_id = "local"
   node_name    = "blade3"
   url          = "http://download.proxmox.com/images/system/ubuntu-25.04-standard_25.04-1.1_amd64.tar.zst"
+  file_name    = "speschke-ubuntu-2504-lxc-img.tar.zst"
 }
 
 resource "proxmox_virtual_environment_container" "ubuntu_container" {
@@ -27,7 +28,7 @@ resource "proxmox_virtual_environment_container" "ubuntu_container" {
   }
 
   initialization {
-    hostname = "ubuntu-container"
+    hostname = "speschke"
 
     ip_config {
       ipv4 {
